@@ -43,10 +43,10 @@ class UserCell: UITableViewCell {
         let url = URL(string: user.avatar_url)
         avatar.sd_setImage(with: url, placeholderImage: UIImage(named: "user"))
         
-        lbLogin.text = user.login
-        lbGithubURL.text = user.html_url
-        lbAccountType.text = user.type
-        lbSiteAdmin.text = "\(user.site_admin)"
+        lbLogin.text = user.login.capitalized
+        lbGithubURL.text = user.html_url.capitalized
+        lbAccountType.text = user.type.capitalized
+        lbSiteAdmin.text = "\(user.site_admin)".capitalized
         
         // Favorite or not
         let tintColor = (user.isFavorite) ? UIColor.red : UIColor.gray
