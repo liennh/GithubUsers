@@ -44,8 +44,11 @@ class ListUsersVC: BaseVC {
         
         logicHandler.updateWithEmptyGUI = {[weak self] in
             guard let _self = self else {return}
-            _self.hideLoading()
-            _self.vNoData.isHidden = false
+            DispatchQueue.main.async {
+                _self.hideLoading()
+                _self.vNoData.isHidden = false
+            }
+            
         }
         
         loadData()
