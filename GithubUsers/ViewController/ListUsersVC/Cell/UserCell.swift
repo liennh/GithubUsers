@@ -63,9 +63,6 @@ class UserCell: UITableViewCell {
             favoriteAction?(user)
         }
         
-        // Update model
-        user!.isFavorite = !user!.isFavorite
-        
         // Update GUI
         let tintColor = (user!.isFavorite) ? UIColor.red : UIColor.gray
         iconLove.image = iconLove.image?.tint(tintColor)

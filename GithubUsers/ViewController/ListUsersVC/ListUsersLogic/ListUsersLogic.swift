@@ -93,11 +93,15 @@ class ListUsersLogic: NSObject {
     }
     
     func addToFavorites(user:User) {
+        user.isFavorite = true
+        
         addToCache(user:user)
         addToDisk(user:user)
     }
     
     func removeFromFavorites(user:User) {
+        user.isFavorite = false
+        
         removeFromCache(user:user)
         removeFromDisk(user:user)
     }
