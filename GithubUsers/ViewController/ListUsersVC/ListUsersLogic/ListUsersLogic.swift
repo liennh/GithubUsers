@@ -6,7 +6,6 @@
 //  Copyright © 2020 Alex Ngo. All rights reserved.
 //
 
-import UIKit
 
 class ListUsersLogic: NSObject {
     var apiService = APIService()
